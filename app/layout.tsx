@@ -76,6 +76,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" className={`${nunito.variable} ${dmSerif.variable}`}>
+      <head>
+        <script
+          async
+          src="https://webful.fr/tracking/webful-track.js"
+          data-site-id="WBF-54351"
+          data-api-key="e44c1e8c75943d2c847e1d8ed2957824e92655ab5264b9a2f6c69c60a229a571"
+          data-base-url="https://webful.fr"
+        />
+      </head>
       <body>
         <a className="skip-link" href="#contenu">
           Aller au contenu

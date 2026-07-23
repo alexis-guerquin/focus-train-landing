@@ -1,0 +1,16 @@
+export const appAssets = {
+  home: "/assets/home-page-modes.png",
+  japanMap: "/assets/solo-japan-start.png",
+  soloSession: "/assets/solo-in-session1.png",
+  countrySelection: "/assets/multi-choos-country.png",
+  liveTrains: "/assets/multi-france-map.png",
+  carriageSelection: "/assets/choose-wagon.png",
+  seatSelection: "/assets/choose-place.png",
+  multiplayerInteriorPrimary: "/assets/multi-in-session1.png",
+  multiplayerInteriorSecondary: "/assets/multi-in-session2.png",
+  collection: "/assets/solo-collection.png",
+  widget: "/assets/iphone-focus-train-widget.png",
+  logo: "/logo.svg",
+  appIcon: "/assets/app-icon.png",
+  footerTrain: "/assets/footer-train.png",
+} as const;

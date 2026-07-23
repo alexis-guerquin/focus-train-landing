@@ -11,6 +11,7 @@ const nav = [
   ["Solo", "/#solo"],
   ["Multijoueur", "/#multijoueur"],
   ["Collection", "/#collection"],
+  ["Tarifs", "/pricing"],
   ["FAQ", "/#faq"],
   ["Support", "/support"],
 ];

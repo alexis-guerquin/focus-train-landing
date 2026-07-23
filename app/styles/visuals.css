@@ -871,10 +871,13 @@
   padding: 0 20px 20px;
   color: var(--muted);
 }
+.final-cta-area {
+  position: relative;
+}
 .final-cta {
   position: relative;
   min-height: 480px;
-  margin-bottom: 90px;
+  margin-bottom: 0;
   display: grid;
   place-items: center;
   border-radius: 48px;
@@ -925,18 +928,14 @@
   height: 280px;
   background: white;
 }
-.cta-track {
-  position: absolute;
-  inset: auto 0 35px;
-  height: 20px;
-  border-top: 3px solid white;
+.final-cta-train {
+  position: relative;
+  z-index: 4;
+  margin-top: clamp(-90px, -10vw, -42px);
 }
-.cta-train {
-  position: absolute;
-  right: 17%;
-  bottom: 2px;
-  font-size: 2.5rem;
-  animation: train-drift 5s ease-in-out infinite;
+.final-cta-train .footer-train-zone {
+  width: 100%;
+  margin: 0;
 }
 .cta-ticket {
   position: absolute;

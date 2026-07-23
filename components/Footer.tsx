@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/CookieConsent";
-import { FooterTrain } from "@/components/FooterTrain";
 import { Logo } from "@/components/Logo";
 import { StoreAccess } from "@/components/StoreAccess";
 import { siteConfig } from "@/config/site";
@@ -16,6 +15,7 @@ export function Footer() {
         <nav aria-label="Liens du pied de page">
           <Link href="/">Accueil</Link>
           <Link href="/#fonctionnalites">Fonctionnalités</Link>
+          <Link href="/pricing">Tarifs</Link>
           <Link href="/support">Assistance</Link>
           <Link href="/confidentialite">Confidentialité</Link>
           <Link href="/mentions-legales">Mentions légales</Link>
@@ -40,7 +40,6 @@ export function Footer() {
           ferroviaire.
         </p>
       </div>
-      <FooterTrain />
     </footer>
   );
 }

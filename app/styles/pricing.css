@@ -80,7 +80,9 @@
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   align-items: center;
-  gap: clamp(24px, 5vw, 62px);
+  gap: clamp(24px, 4vw, 48px);
+  max-width: 920px;
+  margin: 0 auto;
   padding: 20px 14px 40px;
 }
 
@@ -88,7 +90,7 @@
   --ticket-cutout: 18px;
   position: relative;
   isolation: isolate;
-  min-height: 660px;
+  min-height: 590px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border-radius: 28px;
@@ -120,7 +122,7 @@
 }
 
 .pricing-ticket-golden {
-  min-height: 710px;
+  min-height: 640px;
   color: #342105;
   outline: none;
   border: 1px solid rgba(255, 242, 166, 0.82);
@@ -143,24 +145,65 @@
   background-size:
     100% 100%,
     180% 180%;
+  box-shadow: inset 0 0 0 2px rgba(255, 248, 195, 0.35);
+  -webkit-mask:
+    radial-gradient(
+        circle at left 60%,
+        transparent 0 var(--ticket-cutout),
+        #000 calc(var(--ticket-cutout) + 0.5px)
+      )
+      left / 51% 100% no-repeat,
+    radial-gradient(
+        circle at right 60%,
+        transparent 0 var(--ticket-cutout),
+        #000 calc(var(--ticket-cutout) + 0.5px)
+      )
+      right / 51% 100% no-repeat;
+  mask:
+    radial-gradient(
+        circle at left 60%,
+        transparent 0 var(--ticket-cutout),
+        #000 calc(var(--ticket-cutout) + 0.5px)
+      )
+      left / 51% 100% no-repeat,
+    radial-gradient(
+        circle at right 60%,
+        transparent 0 var(--ticket-cutout),
+        #000 calc(var(--ticket-cutout) + 0.5px)
+      )
+      right / 51% 100% no-repeat;
+}
+
+.pricing-ticket-golden .ticket-cutout {
+  display: none;
+}
+
+.pricing-ticket-golden-shell {
+  border-radius: 28px;
   transform: rotate(1.15deg);
   box-shadow:
     0 12px 24px rgba(121, 77, 5, 0.16),
-    0 36px 90px rgba(121, 77, 5, 0.25),
-    inset 0 0 0 2px rgba(255, 248, 195, 0.35);
+    0 36px 90px rgba(121, 77, 5, 0.25);
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 0.45s ease;
 }
 
-.pricing-ticket-golden:hover,
-.pricing-ticket-golden:focus-visible {
-  background-position:
-    0 0,
-    100% 40%;
+.pricing-ticket-golden-shell:hover,
+.pricing-ticket-golden-shell:focus-within {
   transform: translateY(-10px) rotate(0.35deg) scale(1.012);
   box-shadow:
     0 18px 30px rgba(121, 77, 5, 0.18),
     0 48px 110px rgba(121, 77, 5, 0.31),
-    0 0 44px rgba(244, 195, 78, 0.32),
-    inset 0 0 0 2px rgba(255, 250, 210, 0.55);
+    0 0 44px rgba(244, 195, 78, 0.32);
+}
+
+.pricing-ticket-golden-shell:hover .pricing-ticket-golden,
+.pricing-ticket-golden-shell:focus-within .pricing-ticket-golden {
+  background-position:
+    0 0,
+    100% 40%;
+  box-shadow: inset 0 0 0 2px rgba(255, 250, 210, 0.55);
 }
 
 .pricing-ticket-golden:focus-visible {
@@ -475,8 +518,8 @@
     opacity 0.25s ease;
 }
 
-.pricing-ticket-golden:hover .golden-shimmer,
-.pricing-ticket-golden:focus-visible .golden-shimmer {
+.pricing-ticket-golden-shell:hover .golden-shimmer,
+.pricing-ticket-golden-shell:focus-within .golden-shimmer {
   left: 140%;
   opacity: 0.92;
 }
@@ -521,21 +564,22 @@
 
 @media (max-width: 900px) {
   .pricing-tickets {
-    max-width: 620px;
+    max-width: 540px;
     grid-template-columns: 1fr;
     margin: auto;
     gap: 44px;
   }
 
   .pricing-ticket-free,
-  .pricing-ticket-golden {
+  .pricing-ticket-golden,
+  .pricing-ticket-golden-shell {
     min-height: auto;
     transform: none;
   }
 
   .pricing-ticket-free:hover,
-  .pricing-ticket-golden:hover,
-  .pricing-ticket-golden:focus-visible {
+  .pricing-ticket-golden-shell:hover,
+  .pricing-ticket-golden-shell:focus-within {
     transform: translateY(-6px);
   }
 }
@@ -564,6 +608,10 @@
 
   .pricing-ticket {
     --ticket-cutout: 14px;
+    border-radius: 22px;
+  }
+
+  .pricing-ticket-golden-shell {
     border-radius: 22px;
   }
 
@@ -604,7 +652,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .pricing-ticket,
-  .golden-shimmer {
+  .golden-shimmer,
+  .pricing-ticket-golden-shell {
     transition: none;
   }
 }

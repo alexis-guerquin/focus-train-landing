@@ -110,74 +110,85 @@ export default function PricingPage() {
             </footer>
           </article>
 
-          <article
-            className="pricing-ticket pricing-ticket-golden"
-            tabIndex={0}
-          >
-            <span className="golden-shimmer" aria-hidden="true" />
-            <span className="golden-spark golden-spark-one" aria-hidden="true">
-              ✦
-            </span>
-            <span className="golden-spark golden-spark-two" aria-hidden="true">
-              ✦
-            </span>
-            <span className="ticket-cutout ticket-cutout-left" />
-            <span className="ticket-cutout ticket-cutout-right" />
-
-            <header className="pricing-ticket-header">
-              <div>
-                <span>FOCUS TRAIN EXPRESS</span>
-                <small>Pass premium</small>
-              </div>
-              <strong>GT · 200</strong>
-            </header>
-
-            <div className="pricing-ticket-main">
-              <span className="pricing-ticket-kicker">
-                <Sparkles aria-hidden="true" />
-                Billet premium
+          <div className="pricing-ticket-golden-shell">
+            <article
+              className="pricing-ticket pricing-ticket-golden"
+              tabIndex={0}
+            >
+              <span className="golden-shimmer" aria-hidden="true" />
+              <span
+                className="golden-spark golden-spark-one"
+                aria-hidden="true"
+              >
+                ✦
               </span>
-              <h2>Golden Ticket</h2>
-              <p className="golden-includes">
-                Tout le billet gratuit, avec encore plus de voyage.
-              </p>
+              <span
+                className="golden-spark golden-spark-two"
+                aria-hidden="true"
+              >
+                ✦
+              </span>
+              <span className="ticket-cutout ticket-cutout-left" />
+              <span className="ticket-cutout ticket-cutout-right" />
 
-              <div className="golden-prices" aria-label="Tarifs Golden Ticket">
+              <header className="pricing-ticket-header">
                 <div>
-                  <span>Mensuel</span>
-                  <strong>5,99 €</strong>
-                  <small>par mois</small>
+                  <span>FOCUS TRAIN EXPRESS</span>
+                  <small>Pass premium</small>
                 </div>
-                <div className="golden-price-best">
-                  <span>Annuel</span>
-                  <strong>35,99 €</strong>
-                  <small>soit 2,99 €/mois</small>
+                <strong>GT · 200</strong>
+              </header>
+
+              <div className="pricing-ticket-main">
+                <span className="pricing-ticket-kicker">
+                  <Sparkles aria-hidden="true" />
+                  Billet premium
+                </span>
+                <h2>Golden Ticket</h2>
+                <p className="golden-includes">
+                  Tout le billet gratuit, avec encore plus de voyage.
+                </p>
+
+                <div
+                  className="golden-prices"
+                  aria-label="Tarifs Golden Ticket"
+                >
+                  <div>
+                    <span>Mensuel</span>
+                    <strong>5,99 €</strong>
+                    <small>par mois</small>
+                  </div>
+                  <div className="golden-price-best">
+                    <span>Annuel</span>
+                    <strong>35,99 €</strong>
+                    <small>soit 2,99 €/mois</small>
+                  </div>
                 </div>
+
+                <ul className="pricing-features">
+                  {goldenFeatures.map(({ icon: Icon, title, detail, soon }) => (
+                    <li key={title}>
+                      <Icon aria-hidden="true" />
+                      <span>
+                        <strong>{title}</strong>
+                        <small>
+                          {detail}
+                          {soon && <b className="soon-badge">Bientôt</b>}
+                        </small>
+                      </span>
+                      <Check className="feature-check" aria-hidden="true" />
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <ul className="pricing-features">
-                {goldenFeatures.map(({ icon: Icon, title, detail, soon }) => (
-                  <li key={title}>
-                    <Icon aria-hidden="true" />
-                    <span>
-                      <strong>{title}</strong>
-                      <small>
-                        {detail}
-                        {soon && <b className="soon-badge">Bientôt</b>}
-                      </small>
-                    </span>
-                    <Check className="feature-check" aria-hidden="true" />
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <footer className="pricing-ticket-footer">
-              <span>PASS PREMIUM</span>
-              <i className="pricing-barcode" aria-hidden="true" />
-              <strong>GOLD</strong>
-            </footer>
-          </article>
+              <footer className="pricing-ticket-footer">
+                <span>PASS PREMIUM</span>
+                <i className="pricing-barcode" aria-hidden="true" />
+                <strong>GOLD</strong>
+              </footer>
+            </article>
+          </div>
         </div>
 
         <div className="pricing-cta">

@@ -64,7 +64,7 @@ export function StoreAccess({ variant = "nav" }: { variant?: "nav" | "rate" }) {
         const response = await fetch(siteConfig.waitlistEndpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, platform, source: "focus-train.app" }),
+          body: JSON.stringify({ email, platform, source: "focus-train.fr" }),
         });
         if (!response.ok) throw new Error("waitlist-request-failed");
         window.localStorage.setItem("focus-train-waitlist-email", email);

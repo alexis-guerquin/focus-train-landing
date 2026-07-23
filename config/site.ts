@@ -1,6 +1,6 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://focus-train.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://focus-train.fr";
 const supportEmail =
-  process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@focus-train.app";
+  process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@focus-train.fr";
 const appStoreUrl = process.env.NEXT_PUBLIC_APP_STORE_URL || "";
 const configuredReviewUrl = process.env.NEXT_PUBLIC_APP_STORE_REVIEW_URL || "";
 

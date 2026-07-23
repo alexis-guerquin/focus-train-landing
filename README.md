@@ -62,4 +62,4 @@ Avant la mise en production commerciale, renseigner le nom légal et l’adresse
 
 ## Déploiement Vercel
 
-Importer le dépôt dans Vercel, ajouter les variables d’environnement ci-dessus, puis utiliser les réglages Next.js détectés automatiquement. Le domaine de production attendu est `https://focus-train.app`.
+Importer le dépôt dans Vercel, ajouter les variables d’environnement ci-dessus, puis utiliser les réglages Next.js détectés automatiquement. Le domaine de production attendu est `https://focus-train.fr`.

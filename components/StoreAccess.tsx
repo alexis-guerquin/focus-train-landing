@@ -243,7 +243,7 @@ export function StoreAccess({ variant = "nav" }: { variant?: "nav" | "rate" }) {
                   <small>
                     Ton adresse sert uniquement à te prévenir de la
                     disponibilité. Consulte notre{" "}
-                    <a href="/confidentialite">politique de confidentialité</a>.
+                    <a href="/privacy">politique de confidentialité</a>.
                   </small>
                   <p className="waitlist-status" role="status">
                     {status}

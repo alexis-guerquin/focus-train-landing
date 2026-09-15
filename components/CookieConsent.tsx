@@ -86,10 +86,11 @@ export function CookieConsent() {
           Des cookies, mais pas de miettes sur les rails.
         </h2>
         <p>
-          Nous utilisons un cookie essentiel pour mémoriser ton choix. Les
-          services optionnels ne sont autorisés qu’après ton accord.
+          Nous utilisons un cookie pour mémoriser ton choix. La mesure
+          d’audience sans cookie utilisée sur ce site est décrite dans notre
+          politique.
         </p>
-        <Link href="/confidentialite">En savoir plus</Link>
+        <Link href="/privacy">En savoir plus</Link>
       </div>
       <div className="cookie-actions">
         <button

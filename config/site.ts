@@ -21,8 +21,8 @@ export const siteConfig = {
   supportEmail,
   editorLegalName: process.env.NEXT_PUBLIC_EDITOR_LEGAL_NAME || "",
   editorAddress: process.env.NEXT_PUBLIC_EDITOR_ADDRESS || "",
-  privacyUpdatedAt: process.env.NEXT_PUBLIC_PRIVACY_UPDATED_AT || "2026-07-23",
-  privacyUrl: `${siteUrl}/confidentialite`,
+  privacyUpdatedAt: process.env.NEXT_PUBLIC_PRIVACY_UPDATED_AT || "2026-09-15",
+  privacyUrl: `${siteUrl}/privacy`,
   social: {},
 } as const;
 

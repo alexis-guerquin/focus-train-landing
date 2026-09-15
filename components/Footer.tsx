@@ -17,7 +17,7 @@ export function Footer() {
           <Link href="/#fonctionnalites">Fonctionnalités</Link>
           <Link href="/pricing">Tarifs</Link>
           <Link href="/support">Assistance</Link>
-          <Link href="/confidentialite">Confidentialité</Link>
+          <Link href="/privacy">Confidentialité</Link>
           <Link href="/mentions-legales">Mentions légales</Link>
           <StoreAccess variant="rate" />
           <CookieSettingsButton />

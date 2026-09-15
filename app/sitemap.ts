@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${siteConfig.siteUrl}/confidentialite`,
+      url: `${siteConfig.siteUrl}/privacy`,
       changeFrequency: "yearly",
       priority: 0.5,
     },

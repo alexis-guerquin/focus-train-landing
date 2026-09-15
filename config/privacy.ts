@@ -1,13 +1,16 @@
 export const privacyServices = {
-  firebaseAuthentication: false,
-  firebaseFirestore: false,
-  firebaseCloudFunctions: false,
-  firebaseAnalytics: false,
+  firebaseAuthentication: true,
+  firebaseFirestore: true,
+  firebaseRealtimeDatabase: true,
+  firebaseCloudFunctions: true,
+  firebaseAnalyticsAndroid: true,
   firebaseCrashlytics: false,
-  appleStoreKit: false,
-  signInWithApple: false,
-  mapLibre: false,
-  railwayDataProvider: false,
+  firebaseStorage: false,
+  googleSignIn: true,
+  signInWithApple: true,
+  appleStoreKit: true,
+  googlePlayRevenueCat: true,
+  mapLibreOpenFreeMap: true,
+  railwayDataProvider: true,
+  webful: true,
 } as const;
-
-// Activer uniquement les services réellement présents dans l’application.

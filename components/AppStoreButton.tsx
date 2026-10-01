@@ -1,32 +1,38 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Smartphone, X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { useI18n } from "@/components/I18nProvider";
+import { StoreLogo } from "@/components/StoreLogo";
 
 type Props = {
   label?: string;
   compact?: boolean;
   light?: boolean;
+  branded?: boolean;
 };
 
 export function AppStoreButton({
-  label = "Télécharger sur l’App Store",
+  label,
   compact = false,
   light = false,
+  branded = false,
 }: Props) {
   const [open, setOpen] = useState(false);
+  const { messages } = useI18n();
+  const buttonLabel = label || messages.common.downloadAppStore;
 
   if (siteConfig.appStoreUrl) {
     return (
       <a
-        className={`primary-button ${compact ? "button-compact" : ""} ${light ? "button-light" : ""}`}
+        className={`primary-button ${branded ? "store-button store-button-appstore" : ""} ${compact ? "button-compact" : ""} ${light ? "button-light" : ""}`}
         href={siteConfig.appStoreUrl}
         target="_blank"
         rel="noreferrer"
       >
-        <Smartphone size={18} aria-hidden="true" />
-        {label}
+        <StoreLogo platform="ios" size={compact ? 22 : 24} />
+        {buttonLabel}
         {!compact && <ArrowRight size={18} aria-hidden="true" />}
       </a>
     );
@@ -35,12 +41,12 @@ export function AppStoreButton({
   return (
     <>
       <button
-        className={`primary-button ${compact ? "button-compact" : ""} ${light ? "button-light" : ""}`}
+        className={`primary-button ${branded ? "store-button store-button-appstore" : ""} ${compact ? "button-compact" : ""} ${light ? "button-light" : ""}`}
         type="button"
         onClick={() => setOpen(true)}
       >
-        <Smartphone size={18} aria-hidden="true" />
-        Bientôt disponible
+        <StoreLogo platform="ios" size={compact ? 22 : 24} />
+        {messages.appButton.soon}
       </button>
       {open && (
         <div
@@ -59,29 +65,63 @@ export function AppStoreButton({
               className="modal-close"
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Fermer"
+              aria-label={messages.common.close}
             >
               <X size={20} />
             </button>
             <span className="modal-icon" aria-hidden="true">
               🚆
             </span>
-            <p className="eyebrow">Prochain départ</p>
-            <h2 id="availability-title">Focus Train arrive bientôt.</h2>
-            <p>
-              L’application est en préparation pour iPhone. L’App Store sera
-              accessible ici dès sa publication.
-            </p>
+            <p className="eyebrow">{messages.appButton.modalEyebrow}</p>
+            <h2 id="availability-title">{messages.appButton.modalTitle}</h2>
+            <p>{messages.appButton.modalText}</p>
             <button
               className="secondary-button"
               type="button"
               onClick={() => setOpen(false)}
             >
-              Compris
+              {messages.appButton.understood}
             </button>
           </section>
         </div>
       )}
     </>
+  );
+}
+
+export function GooglePlayButton({ compact = false }: { compact?: boolean }) {
+  const { messages } = useI18n();
+  const content = (
+    <>
+      <StoreLogo platform="android" size={compact ? 22 : 24} />
+      <span className="store-button-copy">
+        <b>Google Play</b>
+        <small>{messages.appButton.soon}</small>
+      </span>
+    </>
+  );
+
+  if (siteConfig.googlePlayUrl) {
+    return (
+      <a
+        className={`store-button store-button-play ${compact ? "button-compact" : ""}`}
+        href={siteConfig.googlePlayUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      className={`store-button store-button-play is-coming-soon ${compact ? "button-compact" : ""}`}
+      type="button"
+      aria-disabled="true"
+      title={messages.common.googlePlaySoon}
+    >
+      {content}
+    </button>
   );
 }

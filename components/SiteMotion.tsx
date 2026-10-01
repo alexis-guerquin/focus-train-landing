@@ -15,6 +15,8 @@ const revealSelector = [
   ".split-visual",
   ".journey-band > div",
   ".comparison-card",
+  ".video-copy",
+  ".youtube-frame",
   ".faq-list > details",
   ".support-category",
   ".legal-content > section",

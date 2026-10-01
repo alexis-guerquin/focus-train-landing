@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Cookie, X } from "lucide-react";
 import { appAssets } from "@/config/assets";
+import { useI18n } from "@/components/I18nProvider";
 
 gsap.registerPlugin(useGSAP);
 
@@ -15,6 +16,7 @@ const consentCookie = "focus-train-cookie-consent";
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
   const banner = useRef<HTMLElement>(null);
+  const { messages } = useI18n();
 
   useEffect(() => {
     const hasConsent = document.cookie
@@ -65,7 +67,7 @@ export function CookieConsent() {
         className="cookie-close"
         type="button"
         onClick={() => save("rejected")}
-        aria-label="Fermer et refuser les cookies optionnels"
+        aria-label={messages.cookie.close}
       >
         <X size={18} />
       </button>
@@ -80,17 +82,11 @@ export function CookieConsent() {
       </div>
       <div className="cookie-copy">
         <p className="eyebrow">
-          <Cookie size={14} /> Petit contrôle avant le départ
+          <Cookie size={14} /> {messages.cookie.eyebrow}
         </p>
-        <h2 id="cookie-title">
-          Des cookies, mais pas de miettes sur les rails.
-        </h2>
-        <p>
-          Nous utilisons un cookie pour mémoriser ton choix. La mesure
-          d’audience sans cookie utilisée sur ce site est décrite dans notre
-          politique.
-        </p>
-        <Link href="/privacy">En savoir plus</Link>
+        <h2 id="cookie-title">{messages.cookie.title}</h2>
+        <p>{messages.cookie.text}</p>
+        <Link href="/privacy">{messages.common.learnMore}</Link>
       </div>
       <div className="cookie-actions">
         <button
@@ -98,14 +94,14 @@ export function CookieConsent() {
           type="button"
           onClick={() => save("rejected")}
         >
-          Refuser
+          {messages.cookie.reject}
         </button>
         <button
           className="primary-button"
           type="button"
           onClick={() => save("accepted")}
         >
-          Accepter
+          {messages.cookie.accept}
         </button>
       </div>
     </aside>
@@ -113,6 +109,7 @@ export function CookieConsent() {
 }
 
 export function CookieSettingsButton() {
+  const { messages } = useI18n();
   return (
     <button
       className="footer-cookie-button"
@@ -121,7 +118,7 @@ export function CookieSettingsButton() {
         window.dispatchEvent(new Event("focus-train:open-cookie-settings"))
       }
     >
-      Gérer les cookies
+      {messages.cookie.settings}
     </button>
   );
 }

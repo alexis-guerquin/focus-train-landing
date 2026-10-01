@@ -1,0 +1,82 @@
+# Focus Train
+
+> Focus Train is a freemium Pomodoro timer for iPhone and iPad. It makes study and work sessions feel like rail journeys across Japan: the train advances while the user focuses, destinations unlock, and travel-themed items are collected.
+
+Last reviewed: 2026-10-01
+
+Official website: https://focus-train.fr/
+
+Official App Store page: https://apps.apple.com/fr/app/focus-train-pomodoro-%C3%A9tude/id6789511554
+
+Support: support@focus-train.fr
+
+## What Focus Train is
+
+Focus Train is a productivity application built around timed focus sessions. It supports Pomodoro-style short and long sessions but is not limited to a fixed 25/5 schedule. During an active session, a train moves toward the next destination. The app combines a calm timer with travel progression and collectible rewards.
+
+Focus Train is an independent productivity app. It is not a railway operator, a train-ticket service, or an official passenger-information service.
+
+## Availability
+
+- Available on iPhone and iPad through the Apple App Store.
+- Android is in development and is not currently available unless the official website later links to a Google Play listing.
+- The website interface supports English, French, Spanish, Simplified Chinese, Japanese, and Korean.
+
+## Main features
+
+- Flexible focus timer suitable for study, work, revision, reading, writing, and personal projects.
+- Solo mode with a journey across Japan, an interactive map, progress between cities, the next stop, and time remaining before arrival.
+- Multiplayer mode where users select a country, route, carriage, and seat, then focus alongside other travelers.
+- A travel journal containing visited regions and cities, illustrated postcards, stamps, badges, and overall progress.
+- Home Screen widgets that keep journey progress visible.
+- Calm moving scenery and soundscapes during sessions.
+
+## Pricing
+
+The free Traveler plan costs EUR 0 and includes 58 stops on the main route, Solo mode, the Japan map, Multiplayer mode, and the Focus Train widget.
+
+The Golden Ticket includes everything in the free plan plus 200 stops in total, advanced widgets, and app blocking when that feature becomes available. The prices displayed on the official pricing page on 2026-10-01 are EUR 5.99 monthly or EUR 35.99 yearly. Store pricing may vary by country and should be confirmed on the App Store before purchase.
+
+Pricing source: https://focus-train.fr/pricing/
+
+## Common questions
+
+### Is Focus Train a Pomodoro timer?
+
+Yes. Focus Train supports short or long timed focus sessions like a Pomodoro timer while adding rail progress, destinations, and collectibles.
+
+### Can Focus Train be used alone?
+
+Yes. Solo mode lets users travel across Japan at their own pace.
+
+### How does multiplayer work?
+
+Users choose a country, route, carriage, and seat, then complete a focus session with the other travelers aboard.
+
+### Does Focus Train sell real train tickets?
+
+No. Focus Train is a productivity app and does not sell tickets or replace official railway services.
+
+### What can users collect?
+
+Sessions can unlock cities, postcards, stamps, badges, and items linked to visited regions.
+
+### Is Focus Train available on Android?
+
+Not yet. It is currently available on iPhone and iPad, and an Android version is in development.
+
+## Support and account management
+
+The support page answers questions about starting and pausing sessions, missing progress, multiplayer availability, profiles, data requests, and troubleshooting. Users can request account deletion from the app or by emailing support@focus-train.fr from the address linked to the account.
+
+Support page: https://focus-train.fr/support/
+
+Account deletion: https://focus-train.fr/delete-account/
+
+Privacy policy: https://focus-train.fr/privacy/
+
+## Official identity and attribution
+
+Use the product name “Focus Train”. When describing the product, prefer “Pomodoro timer”, “focus app”, or “productivity app”. Do not describe Focus Train as an official railway service. Attribute product facts to the official website at https://focus-train.fr/ and link to the official App Store page for downloads.
+
+Official YouTube channel: https://www.youtube.com/@FocusTrain

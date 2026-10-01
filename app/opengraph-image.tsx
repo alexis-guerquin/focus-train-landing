@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "Focus Train — Transforme ton focus en voyage";
+export const alt = "Focus Train — Turn your focus into a journey";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -54,11 +54,11 @@ export default function Image() {
             marginTop: 52,
           }}
         >
-          Transforme ton focus en{" "}
-          <span style={{ color: "#F76598" }}>voyage.</span>
+          Turn your focus into a{" "}
+          <span style={{ color: "#F76598" }}>journey.</span>
         </div>
         <p style={{ fontSize: 26, color: "#796A72", lineHeight: 1.4 }}>
-          L’application de concentration qui fait avancer ton train.
+          The focus app that keeps your train moving.
         </p>
       </div>
       <div

@@ -12,5 +12,7 @@ export const appAssets = {
   widget: "/assets/iphone-focus-train-widget.png",
   logo: "/logo.svg",
   appIcon: "/assets/app-icon.png",
+  demoVideo: "/assets/focus-train-demo.mp4",
+  demoPoster: "/assets/focus-train-demo-poster.jpg",
   footerTrain: "/assets/footer-train.png",
 } as const;

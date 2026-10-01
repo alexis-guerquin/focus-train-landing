@@ -1,17 +1,13 @@
+"use client";
+
 import { Armchair, Globe2, Map, Route, TrainFront, Users } from "lucide-react";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { appAssets } from "@/config/assets";
-
-const journey = [
-  "Choisir un pays",
-  "Trouver un trajet",
-  "Choisir un wagon",
-  "Sélectionner une place",
-  "Se concentrer ensemble",
-];
+import { useI18n } from "@/components/I18nProvider";
 
 export function MultiplayerSection() {
+  const { messages } = useI18n();
   return (
     <section className="multiplayer-shell" id="multijoueur">
       <div className="section split-section multiplayer-section">
@@ -19,43 +15,39 @@ export function MultiplayerSection() {
           <PhoneMockup
             className="multi-phone multi-phone-back"
             src={appAssets.countrySelection}
-            alt="Sélection réelle d’un pays dans le mode Multijoueur de Focus Train"
+            alt={messages.multiplayer.countryAlt}
           />
           <PhoneMockup
             className="multi-phone multi-phone-front"
             src={appAssets.multiplayerInteriorPrimary}
-            alt="Session multijoueur réelle à bord d’un wagon Focus Train"
+            alt={messages.multiplayer.sessionAlt}
           />
         </div>
         <div className="split-copy">
           <SectionHeading
-            eyebrow="Mode Multijoueur"
-            title="Travaille avec d’autres voyageurs"
+            eyebrow={messages.multiplayer.eyebrow}
+            title={messages.multiplayer.title}
           >
-            <p>
-              Rejoins des trains inspirés de trajets ferroviaires réels, choisis
-              ton wagon et installe-toi avec d’autres personnes pour avancer
-              ensemble.
-            </p>
+            <p>{messages.multiplayer.intro}</p>
           </SectionHeading>
           <div className="feature-grid compact-grid">
             <span>
-              <Globe2 /> Plusieurs pays
+              <Globe2 /> {messages.multiplayer.features[0]}
             </span>
             <span>
-              <Route /> Trajets en direct
+              <Route /> {messages.multiplayer.features[1]}
             </span>
             <span>
-              <TrainFront /> Choix du wagon
+              <TrainFront /> {messages.multiplayer.features[2]}
             </span>
             <span>
-              <Armchair /> Choix de la place
+              <Armchair /> {messages.multiplayer.features[3]}
             </span>
           </div>
         </div>
       </div>
       <div className="journey-band section">
-        {journey.map((step, index) => (
+        {messages.multiplayer.journey.map((step, index) => (
           <div key={step}>
             <span>{index + 1}</span>
             <small>{step}</small>
@@ -64,32 +56,32 @@ export function MultiplayerSection() {
       </div>
       <div
         className="section multiplayer-gallery"
-        aria-label="Parcours multijoueur dans l’application"
+        aria-label={messages.multiplayer.galleryLabel}
       >
         <PhoneMockup
           src={appAssets.liveTrains}
-          alt="Carte réelle des trains multijoueurs disponibles en France"
-          caption="Trouver un trajet"
+          alt={messages.multiplayer.gallery[0][0]}
+          caption={messages.multiplayer.gallery[0][1]}
         />
         <PhoneMockup
           src={appAssets.carriageSelection}
-          alt="Écran réel de sélection d’un wagon"
-          caption="Choisir un wagon"
+          alt={messages.multiplayer.gallery[1][0]}
+          caption={messages.multiplayer.gallery[1][1]}
         />
         <PhoneMockup
           src={appAssets.seatSelection}
-          alt="Écran réel de sélection d’une place dans le wagon"
-          caption="Sélectionner une place"
+          alt={messages.multiplayer.gallery[2][0]}
+          caption={messages.multiplayer.gallery[2][1]}
         />
         <PhoneMockup
           src={appAssets.multiplayerInteriorSecondary}
-          alt="Vue réelle des voyageurs concentrés ensemble dans un wagon"
-          caption="Avancer ensemble"
+          alt={messages.multiplayer.gallery[3][0]}
+          caption={messages.multiplayer.gallery[3][1]}
         />
       </div>
       <div className="together-band">
         <Map aria-hidden="true" />
-        <strong>Se concentrer seul, ou avancer ensemble.</strong>
+        <strong>{messages.multiplayer.together}</strong>
         <Users aria-hidden="true" />
       </div>
     </section>

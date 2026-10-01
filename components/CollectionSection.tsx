@@ -1,9 +1,13 @@
+"use client";
+
 import { Award, Map, Stamp } from "lucide-react";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { appAssets } from "@/config/assets";
+import { useI18n } from "@/components/I18nProvider";
 
 export function CollectionSection() {
+  const { messages } = useI18n();
   return (
     <section
       className="section split-section collection-section"
@@ -11,39 +15,29 @@ export function CollectionSection() {
     >
       <div className="split-copy">
         <SectionHeading
-          eyebrow="Carnet de voyage"
-          title="Collectionne les souvenirs de tes voyages"
+          eyebrow={messages.collection.eyebrow}
+          title={messages.collection.title}
         >
-          <p>
-            Chaque destination peut enrichir ton carnet. Découvre des cartes
-            postales illustrées, complète tes séries de timbres et suis ta
-            progression région par région.
-          </p>
+          <p>{messages.collection.intro}</p>
         </SectionHeading>
         <div className="feature-list collection-features">
           <div>
             <Map size={18} aria-hidden="true" />
-            <span>Régions et villes visitées</span>
+            <span>{messages.collection.features[0]}</span>
           </div>
           <div>
             <Stamp size={18} aria-hidden="true" />
-            <span>Cartes postales et timbres</span>
+            <span>{messages.collection.features[1]}</span>
           </div>
           <div>
             <Award size={18} aria-hidden="true" />
-            <span>Badges et progression globale</span>
+            <span>{messages.collection.features[2]}</span>
           </div>
         </div>
-        <blockquote>
-          « Ton temps de travail devient une collection que tu as envie de
-          compléter. »
-        </blockquote>
+        <blockquote>“{messages.collection.quote}”</blockquote>
       </div>
       <div className="split-visual collection-visual">
-        <PhoneMockup
-          src={appAssets.collection}
-          alt="Carnet de collection réel de Focus Train pour la région de Hokkaido, avec une carte postale et des timbres"
-        />
+        <PhoneMockup src={appAssets.collection} alt={messages.collection.alt} />
       </div>
     </section>
   );

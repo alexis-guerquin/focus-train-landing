@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { appAssets } from "@/config/assets";
+import { useI18n } from "@/components/I18nProvider";
 
 gsap.registerPlugin(useGSAP);
 
@@ -14,6 +15,7 @@ export function FooterTrain() {
   const timeline = useRef<gsap.core.Timeline | null>(null);
   const busy = useRef(false);
   const [isTravelling, setIsTravelling] = useState(false);
+  const { messages } = useI18n();
 
   const { contextSafe } = useGSAP(
     () => {
@@ -89,12 +91,12 @@ export function FooterTrain() {
           className="footer-train-button"
           type="button"
           onClick={sendTrain}
-          aria-label="Faire partir le train Focus Train"
+          aria-label={messages.footerTrain.action}
           disabled={isTravelling}
         >
           <Image
             src={appAssets.footerTrain}
-            alt="Train rose Focus Train"
+            alt={messages.footerTrain.alt}
             width={2172}
             height={724}
             sizes="(max-width: 640px) 92vw, 820px"

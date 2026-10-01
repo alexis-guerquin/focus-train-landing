@@ -1,92 +1,70 @@
+"use client";
+
 import { Clock3, Map, MapPin, Route, Volume2 } from "lucide-react";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { appAssets } from "@/config/assets";
+import { useI18n } from "@/components/I18nProvider";
 
-const soloFeatures = [
-  [Map, "Carte interactive du Japon"],
-  [Route, "Progression entre les villes"],
-  [MapPin, "Prochain arrêt visible"],
-  [Clock3, "Temps restant avant l’arrivée"],
-];
+const soloIcons = [Map, Route, MapPin, Clock3];
 
 export function SoloSection() {
+  const { messages } = useI18n();
   return (
     <section className="section split-section solo-section" id="solo">
       <div className="split-copy">
         <SectionHeading
-          eyebrow="Mode Solo"
-          title="Explore le Japon, une session après l’autre"
+          eyebrow={messages.solo.eyebrow}
+          title={messages.solo.title}
         >
-          <p>
-            Traverse les régions japonaises à ton rythme. Chaque session te
-            rapproche de la prochaine ville et complète progressivement ton
-            carnet de voyage.
-          </p>
+          <p>{messages.solo.intro}</p>
         </SectionHeading>
         <div className="feature-list">
-          {soloFeatures.map(([Icon, text]) => (
-            <div key={text as string}>
-              <Icon size={18} aria-hidden="true" />
-              <span>{text as string}</span>
-            </div>
-          ))}
+          {messages.solo.features.map((text, index) => {
+            const Icon = soloIcons[index];
+            return (
+              <div key={text}>
+                <Icon size={18} aria-hidden="true" />
+                <span>{text}</span>
+              </div>
+            );
+          })}
         </div>
-        <blockquote>
-          « Chaque minute travaillée devient une nouvelle étape du voyage. »
-        </blockquote>
+        <blockquote>“{messages.solo.quote}”</blockquote>
       </div>
       <div className="split-visual solo-visual">
-        <PhoneMockup
-          src={appAssets.japanMap}
-          alt="Carte réelle du mode Solo de Focus Train, avec le départ à Sapporo"
-        />
+        <PhoneMockup src={appAssets.japanMap} alt={messages.solo.mapAlt} />
       </div>
     </section>
   );
 }
 
-const uses = [
-  "Travail",
-  "Études",
-  "Révisions",
-  "Lecture",
-  "Écriture",
-  "Projets personnels",
-];
-
 export function FocusSection() {
+  const { messages } = useI18n();
   return (
     <section className="section focus-section">
       <div className="split-visual focus-capture">
-        <PhoneMockup
-          src={appAssets.soloSession}
-          alt="Session Solo réelle dans Focus Train avec le train rose, le minuteur et le prochain arrêt Chitose"
-        />
+        <PhoneMockup src={appAssets.soloSession} alt={messages.focus.alt} />
       </div>
       <div className="split-copy">
         <SectionHeading
-          eyebrow="Mode concentration"
-          title="Reste concentré sans pression"
+          eyebrow={messages.focus.eyebrow}
+          title={messages.focus.title}
         >
-          <p>
-            Le paysage défile, le train progresse et les informations
-            essentielles restent toujours visibles, dans une interface douce et
-            apaisante.
-          </p>
+          <p>{messages.focus.intro}</p>
         </SectionHeading>
         <div className="calm-points">
           <span>
-            <Volume2 size={17} /> Ambiances calmes
+            <Volume2 size={17} /> {messages.focus.calm}
           </span>
           <span>
-            <Clock3 size={17} /> Minuteur flexible
+            <Clock3 size={17} /> {messages.focus.timer}
           </span>
         </div>
         <div className="ideal-card">
-          <small>Idéal pour</small>
+          <small>{messages.focus.ideal}</small>
           <div>
-            {uses.map((item) => (
+            {messages.focus.uses.map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>

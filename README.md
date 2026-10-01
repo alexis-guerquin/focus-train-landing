@@ -63,3 +63,15 @@ Avant la mise en production commerciale, renseigner le nom légal et l’adresse
 ## Déploiement Vercel
 
 Importer le dépôt dans Vercel, ajouter les variables d’environnement ci-dessus, puis utiliser les réglages Next.js détectés automatiquement. Le domaine de production attendu est `https://focus-train.fr`.
+
+## Référencement et agents IA
+
+Le site publie plusieurs sources complémentaires :
+
+- `/robots.txt` et `/sitemap.xml` pour l’exploration et l’indexation ;
+- `/llms.txt` comme sommaire conforme à la proposition llms.txt v2 ;
+- `/llms-full.txt` comme résumé consolidé ;
+- `/ai/*.md` comme versions Markdown ciblées du produit, des tarifs et du support ;
+- du JSON-LD relié par des identifiants stables pour le site, l’éditeur, l’application, la vidéo et les FAQ.
+
+Lors d’une modification du produit, mettre à jour ensemble `config/site.ts`, le contenu visible, les fichiers de `public/ai/` et les deux fichiers `llms*.txt`. Ne publier dans les fichiers IA que des informations également vérifiables sur le site ou sur la fiche App Store officielle.

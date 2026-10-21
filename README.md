@@ -1,6 +1,6 @@
 # Focus Train — site officiel
 
-Site vitrine Next.js de l’application iOS Focus Train. Il contient la page marketing, l’assistance, la politique de confidentialité et les mentions légales.
+Site vitrine Next.js de l’application Focus Train sur iOS et Android. Il contient la page marketing, l’assistance, la politique de confidentialité et les mentions légales.
 
 ## Installation
 
@@ -27,7 +27,7 @@ Toutes les valeurs publiques sont regroupées dans [`config/site.ts`](./config/s
 - `NEXT_PUBLIC_SITE_URL` : URL canonique du site
 - `NEXT_PUBLIC_APP_STORE_URL` : URL App Store ; si elle est vide, les CTA affichent « Bientôt disponible »
 - `NEXT_PUBLIC_APP_STORE_REVIEW_URL` : lien direct permettant de noter l’application
-- `NEXT_PUBLIC_GOOGLE_PLAY_URL` : URL Google Play
+- `NEXT_PUBLIC_GOOGLE_PLAY_URL` : URL Google Play ; par défaut, la fiche officielle Focus Train pour Android
 - `NEXT_PUBLIC_WAITLIST_ENDPOINT` : endpoint optionnel recevant `{ email, platform, source }` ; sans endpoint, le formulaire prépare un e-mail au support
 - `NEXT_PUBLIC_SUPPORT_EMAIL` : adresse d’assistance
 - `NEXT_PUBLIC_EDITOR_LEGAL_NAME` : nom légal de l’éditeur
@@ -63,3 +63,15 @@ Avant la mise en production commerciale, renseigner le nom légal et l’adresse
 ## Déploiement Vercel
 
 Importer le dépôt dans Vercel, ajouter les variables d’environnement ci-dessus, puis utiliser les réglages Next.js détectés automatiquement. Le domaine de production attendu est `https://focus-train.fr`.
+
+## Référencement et agents IA
+
+Le site publie plusieurs sources complémentaires :
+
+- `/robots.txt` et `/sitemap.xml` pour l’exploration et l’indexation ;
+- `/llms.txt` comme sommaire conforme à la proposition llms.txt v2 ;
+- `/llms-full.txt` comme résumé consolidé ;
+- `/ai/*.md` comme versions Markdown ciblées du produit, des tarifs et du support ;
+- du JSON-LD relié par des identifiants stables pour le site, l’éditeur, l’application, la vidéo et les FAQ.
+
+Lors d’une modification du produit, mettre à jour ensemble `config/site.ts`, le contenu visible, les fichiers de `public/ai/` et les deux fichiers `llms*.txt`. Ne publier dans les fichiers IA que des informations également vérifiables sur le site ou sur les fiches officielles App Store et Google Play.

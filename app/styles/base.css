@@ -19,6 +19,17 @@
 * {
   box-sizing: border-box;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -78,7 +89,7 @@ svg {
 .section {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 92px 0;
 }
 .eyebrow {
   margin: 0 0 12px;
@@ -172,8 +183,54 @@ h3 {
 .site-footer a:hover {
   color: var(--pink);
 }
-.header-cta {
+.footer-soon {
+  color: var(--muted);
+  font-weight: 700;
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-store-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.language-switcher {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--plum);
+}
+.language-switcher svg {
   flex: 0 0 auto;
+  color: var(--pink);
+}
+.language-switcher select {
+  max-width: 92px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+.mobile-nav .language-switcher {
+  width: 100%;
+  margin-top: 8px;
+  padding: 0 14px;
+  border-radius: 14px;
+}
+.mobile-nav .language-switcher select {
+  width: 100%;
+  max-width: none;
 }
 .menu-button {
   display: none;
@@ -233,6 +290,76 @@ h3 {
 .button-light {
   background: white;
   color: var(--pink);
+}
+
+.store-brand-logo {
+  flex: 0 0 auto;
+  display: block;
+}
+.store-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.store-button:hover {
+  transform: translateY(-2px);
+}
+.store-button-appstore {
+  background: #050505;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+.store-button-play {
+  border-color: #dadce0;
+  background: #fff;
+  color: #202124;
+  box-shadow: 0 8px 22px rgba(60, 64, 67, 0.1);
+}
+.store-button-play.is-coming-soon {
+  cursor: default;
+}
+.store-button-play.is-coming-soon:hover {
+  transform: none;
+}
+.store-button-copy {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+}
+.store-button-copy b,
+.store-button-copy small {
+  line-height: 1;
+}
+.store-button-copy b {
+  font-size: 0.76rem;
+}
+.store-button-copy small {
+  color: #6b7075;
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+.mobile-store-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+.mobile-store-actions .store-button {
+  width: 100%;
+  min-height: 48px;
 }
 
 .modal-backdrop {
@@ -385,9 +512,9 @@ h3 {
   will-change: transform, opacity;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .desktop-nav,
-  .header-cta {
+  .header-tools {
     display: none;
   }
   .menu-button {
@@ -404,9 +531,6 @@ h3 {
   .mobile-nav > a {
     padding: 10px 8px;
     font-weight: 750;
-  }
-  .mobile-nav .primary-button {
-    margin-top: 10px;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;

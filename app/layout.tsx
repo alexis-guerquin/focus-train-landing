@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   keywords: [
     "Pomodoro",
     "Pomodoro timer iPhone",
+    "Pomodoro timer Android",
     "focus app",
     "productivity app",
     "focus timer",

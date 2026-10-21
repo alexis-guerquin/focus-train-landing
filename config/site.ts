@@ -10,7 +10,7 @@ export const siteConfig = {
   name: "Focus Train",
   tagline: "Turn your focus into a journey.",
   description:
-    "Focus Train is a Pomodoro timer for iPhone and iPad that turns study and work sessions into a journey across Japan.",
+    "Focus Train is a Pomodoro timer for iPhone, iPad and Android that turns study and work sessions into a journey across Japan.",
   locale: "en_US",
   language: "en",
   lastUpdated: "2026-10-01",
@@ -21,7 +21,9 @@ export const siteConfig = {
     (appStoreUrl
       ? `${appStoreUrl}${appStoreUrl.includes("?") ? "&" : "?"}action=write-review`
       : ""),
-  googlePlayUrl: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "",
+  googlePlayUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
+    "https://play.google.com/store/apps/details?id=com.focustrain.android",
   youtubeUrl: "https://www.youtube.com/@FocusTrain",
   youtubePlaylistUrl: "https://www.youtube.com/playlist?list=PLbIjjBFGjZEc",
   youtubePlaylistEmbedUrl:

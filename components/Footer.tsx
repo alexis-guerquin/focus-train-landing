@@ -30,7 +30,15 @@ export function Footer() {
           <a href={siteConfig.youtubeUrl} target="_blank" rel="noreferrer">
             YouTube
           </a>
-          <span className="footer-soon">{messages.common.googlePlaySoon}</span>
+          {siteConfig.googlePlayUrl ? (
+            <a href={siteConfig.googlePlayUrl} target="_blank" rel="noreferrer">
+              Google Play
+            </a>
+          ) : (
+            <span className="footer-soon">
+              {messages.common.googlePlaySoon}
+            </span>
+          )}
           <a
             href={siteConfig.appStoreReviewUrl}
             target="_blank"

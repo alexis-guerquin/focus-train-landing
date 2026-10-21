@@ -1,6 +1,6 @@
 "use client";
 
-import { AppStoreButton } from "@/components/AppStoreButton";
+import { AppStoreButton, GooglePlayButton } from "@/components/AppStoreButton";
 import { FooterTrain } from "@/components/FooterTrain";
 import { PetalField } from "@/components/PetalField";
 import { useI18n } from "@/components/I18nProvider";
@@ -19,7 +19,10 @@ export function FinalCTA() {
           <p className="eyebrow">{messages.finalCta.eyebrow}</p>
           <h2>{messages.finalCta.title}</h2>
           <p>{messages.finalCta.intro}</p>
-          <AppStoreButton light label={messages.common.downloadFocusTrain} />
+          <div className="final-cta-actions">
+            <AppStoreButton light label={messages.common.downloadFocusTrain} />
+            <GooglePlayButton />
+          </div>
           <small>{messages.finalCta.availability}</small>
         </div>
         <div className="cta-ticket" aria-hidden="true">

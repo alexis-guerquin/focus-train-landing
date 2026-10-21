@@ -1,12 +1,14 @@
 # Focus Train
 
-> Focus Train is a freemium Pomodoro timer for iPhone and iPad. It makes study and work sessions feel like rail journeys across Japan: the train advances while the user focuses, destinations unlock, and travel-themed items are collected.
+> Focus Train is a freemium Pomodoro timer for iPhone, iPad and Android. It makes study and work sessions feel like rail journeys across Japan: the train advances while the user focuses, destinations unlock, and travel-themed items are collected.
 
-Last reviewed: 2026-10-01
+Last reviewed: 2026-10-21
 
 Official website: https://focus-train.fr/
 
 Official App Store page: https://apps.apple.com/fr/app/focus-train-pomodoro-%C3%A9tude/id6789511554
+
+Official Google Play page: https://play.google.com/store/apps/details?id=com.focustrain.android
 
 Support: support@focus-train.fr
 
@@ -19,7 +21,7 @@ Focus Train is an independent productivity app. It is not a railway operator, a 
 ## Availability
 
 - Available on iPhone and iPad through the Apple App Store.
-- Android is in development and is not currently available unless the official website later links to a Google Play listing.
+- Available on Android through Google Play.
 - The website interface supports English, French, Spanish, Simplified Chinese, Japanese, and Korean.
 
 ## Main features
@@ -63,7 +65,7 @@ Sessions can unlock cities, postcards, stamps, badges, and items linked to visit
 
 ### Is Focus Train available on Android?
 
-Not yet. It is currently available on iPhone and iPad, and an Android version is in development.
+Yes. Focus Train is available on Google Play for Android.
 
 ## Support and account management
 
@@ -77,6 +79,6 @@ Privacy policy: https://focus-train.fr/privacy/
 
 ## Official identity and attribution
 
-Use the product name “Focus Train”. When describing the product, prefer “Pomodoro timer”, “focus app”, or “productivity app”. Do not describe Focus Train as an official railway service. Attribute product facts to the official website at https://focus-train.fr/ and link to the official App Store page for downloads.
+Use the product name “Focus Train”. When describing the product, prefer “Pomodoro timer”, “focus app”, or “productivity app”. Do not describe Focus Train as an official railway service. Attribute product facts to the official website at https://focus-train.fr/ and link to the official App Store or Google Play page for downloads.
 
 Official YouTube channel: https://www.youtube.com/@FocusTrain

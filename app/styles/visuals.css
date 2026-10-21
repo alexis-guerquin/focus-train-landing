@@ -895,6 +895,11 @@
   color: white;
   opacity: 0.75;
 }
+.final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 .cta-copy h2 {
   margin-bottom: 15px;
 }
@@ -902,7 +907,7 @@
   font-size: 1.1rem;
   opacity: 0.88;
 }
-.cta-copy small {
+.cta-copy > small {
   display: block;
   margin-top: 12px;
   opacity: 0.72;

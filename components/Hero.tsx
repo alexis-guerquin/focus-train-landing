@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Play } from "lucide-react";
-import { AppStoreButton } from "@/components/AppStoreButton";
+import { AppStoreButton, GooglePlayButton } from "@/components/AppStoreButton";
 import { PetalField } from "@/components/PetalField";
 import { appAssets } from "@/config/assets";
 import { useI18n } from "@/components/I18nProvider";
@@ -25,6 +25,7 @@ export function Hero() {
         <p className="hero-lead">{messages.hero.lead}</p>
         <div className="hero-actions">
           <AppStoreButton label={messages.common.downloadAppStore} />
+          <GooglePlayButton />
           <a className="secondary-button" href="#videos">
             {messages.hero.videos} <Play size={17} aria-hidden="true" />
           </a>

@@ -96,7 +96,9 @@ export function GooglePlayButton({ compact = false }: { compact?: boolean }) {
       <StoreLogo platform="android" size={compact ? 22 : 24} />
       <span className="store-button-copy">
         <b>Google Play</b>
-        <small>{messages.appButton.soon}</small>
+        <small>
+          {siteConfig.googlePlayUrl ? "Android" : messages.appButton.soon}
+        </small>
       </span>
     </>
   );

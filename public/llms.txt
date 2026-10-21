@@ -1,14 +1,15 @@
 # Focus Train
 
-> Focus Train is a freemium Pomodoro timer for iPhone and iPad that turns focus sessions into rail journeys across Japan, with solo and multiplayer modes and collectibles.
+> Focus Train is a freemium Pomodoro timer for iPhone, iPad and Android that turns focus sessions into rail journeys across Japan, with solo and multiplayer modes and collectibles.
 
-Use the resources below as the canonical summary of the product. Focus Train is a productivity app, not a railway operator, ticket seller, or official passenger-information service. The Android version is in development. Information was last reviewed on 2026-10-01.
+Use the resources below as the canonical summary of the product. Focus Train is a productivity app, not a railway operator, ticket seller, or official passenger-information service. Information was last reviewed on 2026-10-21.
 
 ## Product
 
 - [Product overview](https://focus-train.fr/ai/focus-train.md): Core purpose, platforms, features, availability, and official links.
 - [Official website](https://focus-train.fr/): Human-readable product page with screenshots, a video preview, features, and frequently asked questions.
 - [App Store](https://apps.apple.com/fr/app/focus-train-pomodoro-%C3%A9tude/id6789511554): Official iPhone and iPad download page.
+- [Google Play](https://play.google.com/store/apps/details?id=com.focustrain.android): Official Android download page.
 - [Pricing](https://focus-train.fr/ai/pricing.md): Free plan and Golden Ticket subscription details.
 
 ## Help and policies

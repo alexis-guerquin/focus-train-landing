@@ -36,12 +36,12 @@ const en = {
     close: "Close menu",
   },
   hero: {
-    availability: "Available on iPhone and iPad",
+    availability: "Available on iPhone, iPad and Android",
     titleStart: "Turn your focus",
     titleEnd: "into a journey.",
     lead: "Start a session, move your train forward and discover new destinations while you work.",
     videos: "Watch the videos",
-    note: "For studying, working or making progress on your projects. Android is coming soon.",
+    note: "For studying, working or making progress on your projects.",
     videoLabel:
       "Focus Train preview: choose a route, then start a focus session aboard the train",
     videoFallback: "Your browser cannot play this video.",
@@ -178,7 +178,7 @@ const en = {
       ],
       [
         "Is the app available on Android?",
-        "Not yet. Focus Train is available on iPhone and iPad; the Android version is in development.",
+        "Yes. Download Focus Train from Google Play.",
       ],
       [
         "Where can I get help?",
@@ -190,7 +190,7 @@ const en = {
     eyebrow: "Next departure",
     title: "Ready to board?",
     intro: "Start your next session and turn your focus time into a journey.",
-    availability: "Available on iPhone and iPad · Android coming soon",
+    availability: "Available on iPhone, iPad and Android",
     ticket: "ONE WAY · TO YOUR GOALS",
   },
   footer: {
@@ -439,12 +439,12 @@ const fr: typeof en = {
     close: "Fermer le menu",
   },
   hero: {
-    availability: "Disponible sur iPhone et iPad",
+    availability: "Disponible sur iPhone, iPad et Android",
     titleStart: "Transforme ton focus",
     titleEnd: "en voyage.",
     lead: "Lance une session, fais avancer ton train et découvre de nouvelles destinations pendant que tu travailles.",
     videos: "Voir les vidéos",
-    note: "Pour étudier, travailler ou avancer sur tes projets. Android arrive prochainement.",
+    note: "Pour étudier, travailler ou avancer sur tes projets.",
     videoLabel:
       "Aperçu de Focus Train : choix d’un trajet puis session de concentration à bord du train",
     videoFallback: "Ton navigateur ne peut pas lire cette vidéo.",
@@ -588,7 +588,7 @@ const fr: typeof en = {
       ],
       [
         "L’application est-elle disponible sur Android ?",
-        "Pas encore. Focus Train est disponible sur iPhone et iPad ; la version Android est en préparation.",
+        "Oui. Télécharge Focus Train sur Google Play.",
       ],
       [
         "Où puis-je obtenir de l’aide ?",
@@ -601,7 +601,7 @@ const fr: typeof en = {
     title: "Prêt à monter à bord ?",
     intro:
       "Lance ta prochaine session et transforme ton temps de concentration en voyage.",
-    availability: "Disponible sur iPhone et iPad · Android prochainement",
+    availability: "Disponible sur iPhone, iPad et Android",
     ticket: "ALLER SIMPLE · VERS TES OBJECTIFS",
   },
   footer: {
@@ -850,12 +850,12 @@ const es: typeof en = {
     close: "Cerrar menú",
   },
   hero: {
-    availability: "Disponible en iPhone y iPad",
+    availability: "Disponible en iPhone, iPad y Android",
     titleStart: "Convierte tu concentración",
     titleEnd: "en un viaje.",
     lead: "Inicia una sesión, haz avanzar tu tren y descubre nuevos destinos mientras trabajas.",
     videos: "Ver los vídeos",
-    note: "Para estudiar, trabajar o avanzar en tus proyectos. Android llegará pronto.",
+    note: "Para estudiar, trabajar o avanzar en tus proyectos.",
     videoLabel:
       "Vista previa de Focus Train: elige una ruta e inicia una sesión de concentración",
     videoFallback: "Tu navegador no puede reproducir este vídeo.",
@@ -995,7 +995,7 @@ const es: typeof en = {
       ],
       [
         "¿Está disponible en Android?",
-        "Todavía no. Focus Train está disponible en iPhone y iPad; Android está en desarrollo.",
+        "Sí. Descarga Focus Train desde Google Play.",
       ],
       [
         "¿Dónde puedo obtener ayuda?",
@@ -1007,7 +1007,7 @@ const es: typeof en = {
     eyebrow: "Próxima salida",
     title: "¿Listo para subir?",
     intro: "Inicia tu próxima sesión y convierte tu concentración en un viaje.",
-    availability: "Disponible en iPhone y iPad · Android próximamente",
+    availability: "Disponible en iPhone, iPad y Android",
     ticket: "SOLO IDA · HACIA TUS METAS",
   },
   footer: {
@@ -1248,12 +1248,12 @@ const zh: typeof en = {
     close: "关闭菜单",
   },
   hero: {
-    availability: "现已登陆 iPhone 和 iPad",
+    availability: "现已登陆 iPhone、iPad 和 Android",
     titleStart: "让专注",
     titleEnd: "化作旅程。",
     lead: "开始一次专注，让列车前进，在学习或工作时发现新的目的地。",
     videos: "观看视频",
-    note: "适合学习、工作和个人项目。Android 版即将推出。",
+    note: "适合学习、工作和个人项目。",
     videoLabel: "Focus Train 预览：选择路线并开始车上专注",
     videoFallback: "你的浏览器无法播放此视频。",
     preview: "真实应用预览",
@@ -1343,10 +1343,7 @@ const zh: typeof en = {
         "不是。Focus Train 是效率应用，不销售车票，也不替代官方铁路服务。",
       ],
       ["可以收集什么？", "专注可解锁城市、明信片、邮票、徽章和地区纪念品。"],
-      [
-        "有 Android 版吗？",
-        "暂时没有。现已支持 iPhone 和 iPad，Android 版正在开发。",
-      ],
+      ["有 Android 版吗？", "有。可在 Google Play 下载 Focus Train。"],
       ["如何获得帮助？", "访问帮助页面或发送邮件至 {email}。"],
     ],
   },
@@ -1354,7 +1351,7 @@ const zh: typeof en = {
     eyebrow: "下一班车",
     title: "准备上车了吗？",
     intro: "开始下一次专注，把时间变成旅程。",
-    availability: "支持 iPhone 和 iPad · Android 即将推出",
+    availability: "支持 iPhone、iPad 和 Android",
     ticket: "单程票 · 驶向目标",
   },
   footer: {
@@ -1544,12 +1541,12 @@ const ja: typeof en = {
     close: "メニューを閉じる",
   },
   hero: {
-    availability: "iPhone・iPadで配信中",
+    availability: "iPhone・iPad・Androidで配信中",
     titleStart: "集中を",
     titleEnd: "旅に変えよう。",
     lead: "セッションを始めて列車を進め、作業しながら新しい目的地を見つけよう。",
     videos: "動画を見る",
-    note: "勉強、仕事、個人プロジェクトに。Android版も近日公開。",
+    note: "勉強、仕事、個人プロジェクトに。",
     videoLabel:
       "Focus Trainプレビュー：ルートを選び、車内で集中セッションを開始",
     videoFallback: "ブラウザで動画を再生できません。",
@@ -1657,7 +1654,10 @@ const ja: typeof en = {
         "何を集められる？",
         "街、ポストカード、切手、バッジ、地域の思い出を解放できます。",
       ],
-      ["Android版は？", "現在はiPhone・iPad版のみで、Android版を開発中です。"],
+      [
+        "Android版は？",
+        "はい。Google PlayからFocus Trainをダウンロードできます。",
+      ],
       ["サポートはどこ？", "サポートページまたは {email} へご連絡ください。"],
     ],
   },
@@ -1665,7 +1665,7 @@ const ja: typeof en = {
     eyebrow: "次の出発",
     title: "乗車の準備はできましたか？",
     intro: "次のセッションを始め、集中時間を旅に変えよう。",
-    availability: "iPhone・iPadで配信中 · Android近日公開",
+    availability: "iPhone・iPad・Androidで配信中",
     ticket: "片道 · 目標へ",
   },
   footer: {
@@ -1883,12 +1883,12 @@ const ko: typeof en = {
     close: "메뉴 닫기",
   },
   hero: {
-    availability: "iPhone 및 iPad에서 이용 가능",
+    availability: "iPhone, iPad 및 Android에서 이용 가능",
     titleStart: "집중을",
     titleEnd: "여행으로 바꾸세요.",
     lead: "세션을 시작하고 기차를 움직이며 일하는 동안 새로운 목적지를 발견하세요.",
     videos: "동영상 보기",
-    note: "공부, 업무, 개인 프로젝트에 적합합니다. Android도 곧 출시됩니다.",
+    note: "공부, 업무, 개인 프로젝트에 적합합니다.",
     videoLabel:
       "Focus Train 미리보기: 경로를 고르고 기차 안에서 집중 세션 시작",
     videoFallback: "브라우저에서 동영상을 재생할 수 없습니다.",
@@ -1995,7 +1995,7 @@ const ko: typeof en = {
       ],
       [
         "Android에서 이용할 수 있나요?",
-        "아직 아닙니다. iPhone과 iPad에서 이용 가능하며 Android는 개발 중입니다.",
+        "네. Google Play에서 Focus Train을 다운로드할 수 있습니다.",
       ],
       [
         "도움은 어디서 받나요?",
@@ -2007,7 +2007,7 @@ const ko: typeof en = {
     eyebrow: "다음 출발",
     title: "탑승할 준비가 됐나요?",
     intro: "다음 세션을 시작하고 집중 시간을 여행으로 바꾸세요.",
-    availability: "iPhone 및 iPad 지원 · Android 출시 예정",
+    availability: "iPhone, iPad 및 Android 지원",
     ticket: "편도 · 목표를 향해",
   },
   footer: {

@@ -23,6 +23,7 @@ export function Footer() {
           <Link href="/pricing">{messages.footer.pricing}</Link>
           <Link href="/support">{messages.footer.support}</Link>
           <Link href="/privacy">{messages.footer.privacy}</Link>
+          <Link href="/terms">{messages.footer.terms}</Link>
           <Link href="/mentions-legales">{messages.footer.legal}</Link>
           <a href={siteConfig.appStoreUrl} target="_blank" rel="noreferrer">
             {messages.common.appStore}

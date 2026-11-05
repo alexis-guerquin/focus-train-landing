@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${siteConfig.siteUrl}/terms`,
+      lastModified: new Date("2026-11-05"),
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${siteConfig.siteUrl}/delete-account`,
       lastModified,
       changeFrequency: "yearly",

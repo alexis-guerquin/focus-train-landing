@@ -53,6 +53,7 @@ export const siteConfig = {
   editorLegalName: process.env.NEXT_PUBLIC_EDITOR_LEGAL_NAME || "",
   editorAddress: process.env.NEXT_PUBLIC_EDITOR_ADDRESS || "",
   privacyUpdatedAt: process.env.NEXT_PUBLIC_PRIVACY_UPDATED_AT || "2026-09-15",
+  termsUpdatedAt: "2026-11-05",
   privacyUrl: `${siteUrl}/privacy`,
   social: {},
 } as const;

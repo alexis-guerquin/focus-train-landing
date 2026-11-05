@@ -1,4 +1,5 @@
 import type { Locale } from "@/config/i18n";
+import { terms } from "@/config/terms-i18n";
 
 export type LegalSection = {
   title: string;
@@ -1302,5 +1303,5 @@ const deleteAccount: Record<Locale, LegalDocument> = {
   },
 };
 
-export const legalDocuments = { privacy, legalNotices, deleteAccount };
+export const legalDocuments = { privacy, legalNotices, deleteAccount, terms };
 export type LegalDocumentKey = keyof typeof legalDocuments;

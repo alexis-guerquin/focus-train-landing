@@ -9,12 +9,15 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import {
   dictionaries,
   isLocale,
   type Dictionary,
   type Locale,
 } from "@/config/i18n";
+
+import { defaultLandingLocale, getLandingLocale } from "@/config/landing";
 
 const storageKey = "focus-train-language";
 
@@ -27,19 +30,23 @@ type I18nContextValue = {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+  const homeLocale = getLandingLocale(usePathname());
+  const [savedLocale, setLocaleState] = useState<Locale>(defaultLandingLocale);
+  const locale = homeLocale ?? savedLocale;
 
   const setLocale = useCallback((nextLocale: Locale) => {
     setLocaleState(nextLocale);
     window.localStorage.setItem(storageKey, nextLocale);
-    document.documentElement.lang = nextLocale;
   }, []);
 
   useEffect(() => {
     const savedLocale = window.localStorage.getItem(storageKey);
-    if (isLocale(savedLocale)) setLocale(savedLocale);
-    else document.documentElement.lang = "en";
-  }, [setLocale]);
+    if (isLocale(savedLocale)) setLocaleState(savedLocale);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   const value = useMemo(
     () => ({ locale, messages: dictionaries[locale], setLocale }),

@@ -3,7 +3,7 @@ const supportEmail =
   process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@focus-train.fr";
 const appStoreUrl =
   process.env.NEXT_PUBLIC_APP_STORE_URL ||
-  "https://apps.apple.com/fr/app/focus-train-pomodoro-%C3%A9tude/id6789511554";
+  "https://apps.apple.com/fr/app/id6789511554";
 const configuredReviewUrl = process.env.NEXT_PUBLIC_APP_STORE_REVIEW_URL || "";
 
 export const siteConfig = {

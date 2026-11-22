@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Get help with Focus Train sessions, journeys, accounts and purchases.",
   alternates: {
-    canonical: "/support",
+    canonical: "/support/",
     types: { "text/markdown": absoluteUrl("/ai/support.md") },
   },
   openGraph: {

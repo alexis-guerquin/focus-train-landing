@@ -4,7 +4,7 @@ import { LocalizedLegalDocument } from "@/components/LocalizedLegalDocument";
 export const metadata: Metadata = {
   title: "Legal notice",
   description: "Legal information for the official Focus Train website.",
-  alternates: { canonical: "/mentions-legales" },
+  alternates: { canonical: "/mentions-legales/" },
 };
 
 export default function LegalNoticesPage() {

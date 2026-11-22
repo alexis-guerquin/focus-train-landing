@@ -1,53 +1,24 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
+import { defaultLandingLocale, landingIcon, landingPaths, previews, shareImage, storeImages, type LandingLocale } from "@/config/landing";
+import { absoluteUrl } from "@/config/site";
 
 export const dynamic = "force-static";
 
-const lastModified = new Date(siteConfig.lastUpdated);
+const supportPages = [
+  "/pricing/", "/support/", "/privacy/", "/terms/", "/delete-account/", "/mentions-legales/",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteConfig.siteUrl,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${siteConfig.siteUrl}/pricing`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteConfig.siteUrl}/support`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteConfig.siteUrl}/privacy`,
-      lastModified,
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${siteConfig.siteUrl}/terms`,
-      lastModified: new Date("2026-11-05"),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${siteConfig.siteUrl}/delete-account`,
-      lastModified,
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${siteConfig.siteUrl}/mentions-legales`,
-      lastModified,
-      changeFrequency: "yearly",
-      priority: 0.4,
-    },
-  ];
+  const languages = {
+    en: absoluteUrl(landingPaths.en),
+    fr: absoluteUrl(landingPaths.fr),
+    "x-default": absoluteUrl(landingPaths[defaultLandingLocale]),
+  };
+  const homepages = (Object.keys(landingPaths) as LandingLocale[]).map((locale) => ({
+    url: absoluteUrl(landingPaths[locale]),
+    lastModified: "2026-11-22",
+    alternates: { languages },
+    images: [landingIcon, shareImage, ...storeImages(locale).map(({ src }) => src), ...previews.flatMap(({ images }) => images.map(({ src }) => src))].map(absoluteUrl),
+  }));
+  return [...homepages, ...supportPages.map((path) => ({ url: absoluteUrl(path) }))];
 }

@@ -3,11 +3,9 @@ import { DM_Serif_Display, Nunito_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CookieConsent } from "@/components/CookieConsent";
-import { SiteMotion } from "@/components/SiteMotion";
 import { I18nProvider } from "@/components/I18nProvider";
-import { appAssets } from "@/config/assets";
+import { landingCopy, shareImage } from "@/config/landing";
 import { absoluteUrl, siteConfig } from "@/config/site";
-import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const nunito = Nunito_Sans({
@@ -30,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Focus Train — Pomodoro timer and a journey across Japan",
+    default: landingCopy.en.title,
     template: "%s — Focus Train",
   },
   description: siteConfig.description,
@@ -39,24 +37,6 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   manifest: "/manifest.webmanifest",
-  keywords: [
-    "Pomodoro",
-    "Pomodoro timer iPhone",
-    "Pomodoro timer Android",
-    "focus app",
-    "productivity app",
-    "focus timer",
-    "study timer",
-    "ADHD focus",
-    "gamified productivity",
-    "Japan journey",
-  ],
-  alternates: {
-    canonical: "/",
-    types: {
-      "text/markdown": absoluteUrl("/ai/focus-train.md"),
-    },
-  },
   robots: {
     index: true,
     follow: true,
@@ -73,11 +53,11 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
-    title: "Focus Train — Pomodoro timer and a journey across Japan",
+    title: landingCopy.en.title,
     description: siteConfig.description,
     images: [
       {
-        url: absoluteUrl("/opengraph-image"),
+        url: absoluteUrl(shareImage),
         width: 1200,
         height: 630,
         alt: "Focus Train, the Pomodoro timer that turns focus into a journey",
@@ -86,13 +66,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Focus Train — Pomodoro timer and a journey across Japan",
+    title: landingCopy.en.title,
     description: siteConfig.description,
-    images: [absoluteUrl("/opengraph-image")],
+    images: [absoluteUrl(shareImage)],
   },
   icons: {
-    icon: [{ url: appAssets.appIcon, type: "image/png", sizes: "1024x1024" }],
-    apple: [{ url: appAssets.appIcon, type: "image/png", sizes: "1024x1024" }],
+    icon: [{ url: "/focus-train-favicon.png", type: "image/png", sizes: "96x96" }],
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
   },
   other: {
     "apple-itunes-app": "app-id=6789511554",
@@ -116,12 +96,10 @@ export default function RootLayout({
       </head>
       <body>
         <I18nProvider>
-          <SiteMotion>
-            <Header />
-            <main id="contenu">{children}</main>
-            <Footer />
-            <CookieConsent />
-          </SiteMotion>
+          <Header />
+          <main id="contenu">{children}</main>
+          <Footer />
+          <CookieConsent />
         </I18nProvider>
       </body>
     </html>

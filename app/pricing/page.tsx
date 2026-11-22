@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Compare Focus Train's free plan with the Golden Ticket: more stops across Japan, advanced widgets and upcoming app blocking.",
   alternates: {
-    canonical: "/pricing",
+    canonical: "/pricing/",
     types: { "text/markdown": absoluteUrl("/ai/pricing.md") },
   },
   openGraph: {

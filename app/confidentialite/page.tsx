@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy policy",
   description:
     "Focus Train privacy policy for accounts, focus sessions, progress, multiplayer, subscriptions and third-party services.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: "/privacy/" },
   robots: { index: true, follow: true },
 };
 

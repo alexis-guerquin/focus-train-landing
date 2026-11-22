@@ -205,7 +205,6 @@ button.rate-app-link,
   z-index: 110;
   width: min(620px, calc(100% - 44px));
   display: grid;
-  grid-template-columns: 125px 1fr;
   gap: 4px 22px;
   padding: 24px;
   border: 1px solid rgba(247, 101, 152, 0.28);
@@ -229,15 +228,6 @@ button.rate-app-link,
   color: var(--ink);
 }
 
-.cookie-train {
-  align-self: center;
-  overflow: hidden;
-}
-
-.cookie-train img {
-  width: 145px;
-  height: auto;
-}
 
 .cookie-copy {
   padding-right: 28px;
@@ -269,7 +259,6 @@ button.rate-app-link,
 }
 
 .cookie-actions {
-  grid-column: 2;
   display: flex;
   justify-content: flex-end;
   gap: 8px;
@@ -316,15 +305,11 @@ button.rate-app-link,
     right: 12px;
     bottom: 12px;
     width: calc(100% - 24px);
-    grid-template-columns: 82px 1fr;
-    gap: 5px 14px;
+      gap: 5px 14px;
     padding: 19px 15px;
     border-radius: 22px;
   }
 
-  .cookie-train img {
-    width: 100px;
-  }
 
   .cookie-copy {
     padding-right: 20px;

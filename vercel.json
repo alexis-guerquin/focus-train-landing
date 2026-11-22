@@ -1,0 +1,89 @@
+{
+  "redirects": [
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/support/",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/mentions-legales/",
+      "permanent": true
+    },
+    {
+      "source": "/app-icon.svg",
+      "destination": "/assets/focus-train-icon.png",
+      "permanent": true
+    },
+    {
+      "source": "/assets/app-icon.png",
+      "destination": "/assets/focus-train-icon.png",
+      "permanent": true
+    },
+    {
+      "source": "/favicon.svg",
+      "destination": "/focus-train-favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/logo.svg",
+      "destination": "/assets/focus-train-icon.png",
+      "permanent": true
+    },
+    {
+      "source": "/opengraph-image",
+      "destination": "/focus-train-pomodoro.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/llms-full.txt",
+      "destination": "/llms.txt",
+      "permanent": true
+    },
+    {
+      "source": "/ai/focus-train.md",
+      "destination": "/llms.txt",
+      "permanent": true
+    },
+    {
+      "source": "/ai/support.md",
+      "destination": "/support/",
+      "permanent": true
+    },
+    {
+      "source": "/ai/pricing.md",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/support/",
+      "permanent": true
+    },
+    {
+      "source": "/legal/",
+      "destination": "/mentions-legales/",
+      "permanent": true
+    },
+    {
+      "source": "/opengraph-image/",
+      "destination": "/focus-train-pomodoro.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/screens/collection-de-voyage.webp",
+      "destination": "/assets/screens/collection-hokkaido.webp",
+      "permanent": true
+    }
+  ]
+}

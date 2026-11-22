@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { appAssets } from "@/config/assets";
+import { landingIcon } from "@/config/landing";
 import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
@@ -15,8 +15,8 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#f76598",
     icons: [
       {
-        src: appAssets.appIcon,
-        sizes: "1024x1024",
+        src: landingIcon,
+        sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },

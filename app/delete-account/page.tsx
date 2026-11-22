@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Delete your Focus Train account",
   description:
     "Request the deletion of your Focus Train account and associated data.",
-  alternates: { canonical: "/delete-account" },
+  alternates: { canonical: "/delete-account/" },
 };
 
 export default function DeleteAccountPage() {

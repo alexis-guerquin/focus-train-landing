@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Terms of use",
   description:
     "Terms for the Focus Train iOS and Android app, including accounts, multiplayer features and subscriptions.",
-  alternates: { canonical: "/terms" },
+  alternates: { canonical: "/terms/" },
   robots: { index: true, follow: true },
 };
 
